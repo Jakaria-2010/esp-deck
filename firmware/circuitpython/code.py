@@ -1,8 +1,8 @@
 import time
 
-from nexora.boot import boot
-from nexora.display import clear, show, text
-from nexora.system import run_os
+from nexor.boot import boot
+from nexor.display import clear, show, text
+from nexor.system import run_os
 
 OS_NAME = "NexorOS"
 OS_VERSION = "0.2.0"

@@ -7,12 +7,12 @@ from .buttons import get_button
 
 
 # =========================================================
-# NEXORA CLOCK
+# NEXOR CLOCK
 # =========================================================
 
 _rtc = rtc.RTC()
 
-DATETIME_FILE = "/sd/NEXORA/config/datetime.cfg"
+DATETIME_FILE = "/sd/NEXOR/config/datetime.cfg"
 
 
 # =========================================================
@@ -47,12 +47,12 @@ def get_date_string():
 # =========================================================
 def ensure_config_directory():
     try:
-        os.mkdir("/sd/NEXORA")
+        os.mkdir("/sd/NEXOR")
     except OSError:
         pass
 
     try:
-        os.mkdir("/sd/NEXORA/config")
+        os.mkdir("/sd/NEXOR/config")
     except OSError:
         pass
 
@@ -62,7 +62,7 @@ def save_datetime():
     dt = _rtc.datetime
 
     try:
-        with open("/sd/NEXORA/config/datetime.cfg", "w") as f:
+        with open("/sd/NEXOR/config/datetime.cfg", "w") as f:
             f.write("{},{},{},{},{},{}".format(
                 dt.tm_year,
                 dt.tm_mon,

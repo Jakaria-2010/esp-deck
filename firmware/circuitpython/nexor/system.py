@@ -143,7 +143,7 @@ def show_main_menu():
 
 
 # -------------------------
-# NEXORA OS
+# NEXOR OS
 # -------------------------
 
 def run_os():

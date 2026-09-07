@@ -6,7 +6,7 @@ from .spi import spi
 
 
 # =========================================================
-# NEXORA SD CONFIGURATION
+# NEXOR SD CONFIGURATION
 # =========================================================
 
 SD_MOUNT = "/sd"

@@ -7,12 +7,12 @@ from .sd import init_sd
 
 
 # =========================================================
-# NEXORA CONFIGURATION
+# NEXOR CONFIGURATION
 # =========================================================
 
-NEXORA_DIR = "/sd/NEXORA"
-CONFIG_DIR = "/sd/NEXORA/config"
-CONFIG_FILE = "/sd/NEXORA/config/system.cfg"
+NEXOR_DIR = "/sd/NEXOR"
+CONFIG_DIR = "/sd/NEXOR/config"
+CONFIG_FILE = "/sd/NEXOR/config/system.cfg"
 
 
 # =========================================================
@@ -46,7 +46,7 @@ def initialize_storage():
 def create_directories():
 
     try:
-        os.mkdir(NEXORA_DIR)
+        os.mkdir(NEXOR_DIR)
     except OSError:
         pass
 
@@ -67,7 +67,7 @@ def is_configured():
         with open(CONFIG_FILE, "r") as f:
             data = f.read().strip()
 
-        if data == "NEXORA_CONFIGURED":
+        if data == "NEXOR_CONFIGURED":
             return True
 
     except OSError:
@@ -85,7 +85,7 @@ def save_configuration():
     create_directories()
 
     with open(CONFIG_FILE, "w") as f:
-        f.write("NEXORA_CONFIGURED")
+        f.write("NEXOR_CONFIGURED")
 
 
 # =========================================================
@@ -223,7 +223,7 @@ def first_boot():
 
 
 # =========================================================
-# NEXORA BOOT
+# NEXOR BOOT
 # =========================================================
 
 def boot():
