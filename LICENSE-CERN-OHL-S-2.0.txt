@@ -1,0 +1,13 @@
+CERN-OHL-S-2.0
+
+Hardware-design files in this repository are intended to be licensed under the
+CERN Open Hardware Licence Version 2 — Strongly Reciprocal.
+
+The canonical license text is maintained by the Open Hardware Repository:
+https://ohwr.org/cern_ohl_s_v2.txt
+
+Official license information:
+https://ohwr.org/licences/
+
+For the avoidance of doubt, this file is a license reference notice rather
+than a modified reproduction of the canonical CERN legal text.

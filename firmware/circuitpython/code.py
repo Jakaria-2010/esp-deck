@@ -4,15 +4,15 @@ from nexora.boot import boot
 from nexora.display import clear, show, text
 from nexora.system import run_os
 
-OS_NAME = "NEXORA"
-OS_VERSION = "0.1.0"
+OS_NAME = "NexorOS"
+OS_VERSION = "0.2.0"
 
 
 def boot_screen():
     clear()
-    text("NEXORA", 45, 8)
+    text("NEXOROS", 43, 8)
     text("Starting...", 30, 28)
-    text("OS v0.1.0", 38, 45)
+    text("NexorOS v0.2.0", 31, 45)
     show()
     time.sleep(2)
 

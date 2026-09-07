@@ -13,7 +13,7 @@ from .ui import run_menu
 from .clock import get_time_string, get_date_string, get_datetime
 
 
-OS_NAME = "NEXORA"
+OS_NAME = "NexorOS"
 OS_VERSION = "0.2.0"
 
 
@@ -36,7 +36,7 @@ def show_home():
     clear()
 
     # Status bar
-    text("NEXORA", 2, 0)
+    text("NexorOS", 2, 0)
     text("SD", 108, 0)
 
     # Top separator

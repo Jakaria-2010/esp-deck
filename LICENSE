@@ -1,9 +1,12 @@
-MIT License
+# ESP-Deck / NexorOS licensing
 
-Copyright (c) 2026 Nexora contributors
+This repository contains multiple types of work, so licensing is component-specific.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction.
+- **Software and firmware:** MIT License — see `LICENSE-MIT.txt`
+- **Hardware design files:** CERN-OHL-S-2.0 — see `LICENSE-CERN-OHL-S-2.0.txt`
+- **Documentation and original project media:** CC BY 4.0 — see `LICENSE-CC-BY-4.0.txt`
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND.
+Third-party dependencies retain their own licenses. See `NOTICE.md`.
+
+The presence of a license does not grant permission to use third-party
+trademarks, logos, or names.

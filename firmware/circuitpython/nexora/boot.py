@@ -134,7 +134,7 @@ def first_boot():
     )
 
     text(
-        "NEXORA",
+        "NexorOS",
         45,
         25
     )

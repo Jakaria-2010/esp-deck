@@ -1,0 +1,11 @@
+Creative Commons Attribution 4.0 International (CC BY 4.0)
+
+Documentation and original project media identified as CC BY 4.0 may be
+shared and adapted, including commercially, provided the applicable
+attribution and license requirements are followed.
+
+Canonical legal code:
+https://creativecommons.org/licenses/by/4.0/
+
+Creative Commons explains that the canonical English legal code is the
+operative legal layer of the 4.0 license suite.

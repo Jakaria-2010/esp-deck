@@ -10,7 +10,7 @@ VISIBLE_ITEMS = 5
 
 
 def header(title):
-    """Draw the NEXORA header."""
+    """Draw the NexorOS header."""
 
     clear()
 
