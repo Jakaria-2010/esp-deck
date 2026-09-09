@@ -93,8 +93,8 @@ def app_placeholder(name):
     clear()
 
     center_text(name, 18)
-    center_text("APP NOT READY", 32)
-    center_text("BACK = MENU", 50)
+    center_text("Coming soon.....", 32)
+    center_text("Press BACK", 50)
 
     show()
 
