@@ -7,7 +7,7 @@ from .display import (
     center_text,
     draw_big_time
 )
-
+from .get_day_month import get_home_date
 from .buttons import get_button
 from .ui import run_menu
 from .clock import get_time_string, get_date_string, get_datetime
@@ -26,6 +26,8 @@ MAIN_MENU = [
     "Settings"
 ]
 
+#Temporary Shoutcut 
+SHORTCUT_APP=4
 
 # -------------------------
 # HOME SCREEN
@@ -39,21 +41,19 @@ def show_home():
     text("NexorOS", 2, 0)
     text("SD", 108, 0)
 
-    # Top separator
-    text("----------------------", 0, 9)
 
     # Large clock
     draw_big_time(get_time_string())
 
     # Date
-    center_text(get_date_string(), 50)
+    center_text(get_home_date(get_datetime()), 46)
 
     # Soft-key area
     # No separator here because there isn't enough
     # vertical space for both the line and text.
 
     text("MENU", 2, 57)
-    text("OK", 113, 57)
+    text("SHORTCUT", 113, 57)
 
     show()
 
@@ -78,8 +78,10 @@ def wait_for_menu():
 
         button = get_button()
 
-        if button == "OK":
+        if button == "OK" or button == "LEFT":
             return
+        if button == "RIGHT":
+            return "SHORTCUT"
 
         time.sleep(0.01)
 
@@ -152,7 +154,11 @@ def run_os():
 
         show_home()
 
-        wait_for_menu()
+        action = wait_for_menu()
+        
+        if action == "SHORTCUT":
+            launch_app(SHORTCUT_APP)
+            continue
 
         selected = show_main_menu()
 
