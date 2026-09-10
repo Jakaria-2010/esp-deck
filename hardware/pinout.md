@@ -1,4 +1,4 @@
-# Nexora GPIO Pinout
+# ESP-Deck / NexorOS GPIO Pinout
 
 ## Display
 - GPIO10: OLED CS

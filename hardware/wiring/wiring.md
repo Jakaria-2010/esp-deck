@@ -1,4 +1,4 @@
-# Nexora v0.2.5 Hardware Wiring
+# ESP-Deck / NexorOS v0.2.5 Hardware Wiring
 
 ## Display: SSD1306 OLED (SPI)
 
@@ -27,7 +27,7 @@
 
 ### SPI Bus Sharing
 
-Nexora uses a shared SPI bus:
+ESP-Deck uses a shared SPI bus:
 
 - Clock: GPIO 12
 - MOSI: GPIO 11

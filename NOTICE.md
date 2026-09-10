@@ -6,8 +6,8 @@
 - **NexorOS** is the name used for the operating system.
 - **Nexor** is used as a project-family naming convention.
 
-Names and logos are not automatically licensed by the open-source licenses in
-this repository.
+Names, logos, and other branding are not automatically licensed by the
+open-source licenses in this repository.
 
 ## Third-party software
 

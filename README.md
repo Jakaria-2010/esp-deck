@@ -77,7 +77,7 @@ chip-select pins.
 | Up | GPIO 4 |
 | Down | GPIO 5 |
 
-See [`hardware/wiring/wiring.md`](hardware/wiring/nexora_wiring.md) and
+See [`hardware/wiring/wiring.md`](hardware/wiring/wiring.md) and
 [`hardware/pinout.md`](hardware/pinout.md).
 
 ## Repository structure

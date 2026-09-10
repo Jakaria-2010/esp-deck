@@ -1,4 +1,4 @@
-# Nexora Hardware
+# ESP-Deck Hardware
 
 Prototype hardware documentation.
 

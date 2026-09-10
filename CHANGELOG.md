@@ -13,9 +13,8 @@
 - Initial tools architecture for future IR and Wi-Fi research features
 
 ### Notes
-- The `nexora/` Python package name is retained for firmware compatibility.
-- Existing `/sd/NEXORA/` configuration paths are retained for v0.2.5
-  compatibility.
+- The `nexor/` Python package is used by the v0.2.5 firmware.
+- Existing `/sd/NEXORA/` configuration paths are retained for compatibility.
 
 ## Unreleased
 

@@ -1,6 +1,6 @@
-# Architecture
+# NexorOS Architecture
 
-Nexora uses a modular CircuitPython architecture.
+NexorOS uses a modular CircuitPython architecture.
 
 Main modules:
 - Display
