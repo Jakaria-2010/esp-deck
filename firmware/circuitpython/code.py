@@ -1,7 +1,7 @@
 import time
 
 from nexor.boot import boot
-from nexor.display import clear, show, text
+from nexor.display import clear, show, text, center_text
 from nexor.system import run_os
 
 OS_NAME = "NexorOS"
@@ -10,9 +10,11 @@ OS_VERSION = "0.2.0"
 
 def boot_screen():
     clear()
-    text("NEXOROS", 43, 8)
-    text("Starting...", 30, 28)
-    text("NexorOS v0.2.0", 31, 45)
+    center_text("Esp Deck",20)
+    #text("Starting...", 30, 28)
+    text("Powered by",11,44)
+    center_text("Next Core",56)
+    
     show()
     time.sleep(2)
 
