@@ -1,6 +1,6 @@
 # Changelog
 
-## [0.2.0] — ESP-Deck / NexorOS first public prototype
+## [0.2.5] — ESP-Deck / NexorOS first public prototype
 
 ### Added
 - ESP32-S3 handheld platform structure
@@ -14,7 +14,7 @@
 
 ### Notes
 - The `nexora/` Python package name is retained for firmware compatibility.
-- Existing `/sd/NEXORA/` configuration paths are retained for v0.2.0
+- Existing `/sd/NEXORA/` configuration paths are retained for v0.2.5
   compatibility.
 
 ## Unreleased

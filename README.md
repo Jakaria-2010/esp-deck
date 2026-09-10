@@ -13,7 +13,7 @@ that can grow from the current clock/UI prototype into a collection of
 applications and hardware tools.
 
 > **Current status:** Prototype / active development  
-> **Current firmware milestone:** v0.2.0
+> **Current firmware milestone:** v0.2.5
 
 ## Project identity
 
@@ -31,7 +31,7 @@ Nexor or NexorOS commercially.
 
 ## Current prototype
 
-The v0.2.0 prototype includes:
+The v0.2.5 prototype includes:
 
 - ESP32-S3 platform
 - SSD1306 SPI OLED interface
@@ -148,7 +148,7 @@ See [`tools/README.md`](tools/README.md).
 The firmware is written in CircuitPython.
 
 The Python package directory is currently named `nexora/` for compatibility
-with the existing v0.2.0 codebase. The user-facing operating-system name is
+with the existing v0.2.5 codebase. The user-facing operating-system name is
 **NexorOS**.
 
 This distinction allows the branding to change without unnecessarily breaking

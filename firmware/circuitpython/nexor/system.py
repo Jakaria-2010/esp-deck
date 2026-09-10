@@ -14,7 +14,7 @@ from .clock import get_time_string, get_date_string, get_datetime
 
 
 OS_NAME = "NexorOS"
-OS_VERSION = "0.2.0"
+OS_VERSION = "0.2.5"
 
 
 MAIN_MENU = [

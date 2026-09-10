@@ -16,8 +16,9 @@ git push
 
 Use semantic-style version tags:
 
-- `v0.2.0` — current prototype milestone
-- `v0.2.1` — bug-fix release
+- `v0.2.0` — first prototype milestone
+- `v0.2.5` — current prototype milestone
+- `v0.2.6` — bug-fix release
 - `v0.3.0` — feature release
 - `v1.0.0` — first stable release
 

@@ -1,4 +1,4 @@
-# Nexora v0.2.0 Hardware Wiring
+# Nexora v0.2.5 Hardware Wiring
 
 ## Display: SSD1306 OLED (SPI)
 
