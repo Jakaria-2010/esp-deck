@@ -1,181 +1,83 @@
-from .display import clear, show, text
+from .display import clear, show, text, inverted_text, rounded_rect, fill_rounded_rect, hline
 from .buttons import get_button
 import time
 
-
 SCREEN_WIDTH = 128
 SCREEN_HEIGHT = 64
-
-VISIBLE_ITEMS = 5
+VISIBLE_ITEMS = 4
 
 
 def header(title):
-    """Draw the NexorOS header."""
-
     clear()
-
-    text(title, 45, 0)
-    text("----------------", 8, 9)
+    # Thin rounded device-style frame.
+    rounded_rect(1, 1, 126, 62, 5, 1)
+    text(title, 8, 3)
+    hline(4, 13, 120, 1)
 
 
 def menu(items, selected=0):
-    """
-    Draw a scrollable menu.
-
-    items:
-        List of menu item names.
-
-    selected:
-        Currently selected item index.
-    """
-
-    # Empty menu
-    if len(items) == 0:
-        clear()
-        text("EMPTY MENU", 32, 28)
+    if not items:
+        header("Menu")
+        text("EMPTY", 49, 30)
         show()
         return
 
+    selected = max(0, min(selected, len(items) - 1))
 
-    # Keep selection valid
-    if selected < 0:
-        selected = 0
-
-    if selected >= len(items):
-        selected = len(items) - 1
-
-
-    # -----------------------------------------------------
-    # Calculate scrolling position
-    # -----------------------------------------------------
-
+    # Keep the selected item visible while showing four clean rows.
     if len(items) <= VISIBLE_ITEMS:
-
         start = 0
-
     else:
+        start = min(max(0, selected - 1), len(items) - VISIBLE_ITEMS)
 
-        start = selected - (VISIBLE_ITEMS // 2)
+    header("Menu")
 
-        if start < 0:
-            start = 0
+    # 128x64 / 5x8 font: four rows with generous spacing.
+    row_y = (18, 30, 42, 54)
+    card_x = 10
+    card_w = 110
+    card_h = 10
 
-        maximum_start = len(items) - VISIBLE_ITEMS
-
-        if start > maximum_start:
-            start = maximum_start
-
-
-    # -----------------------------------------------------
-    # Draw menu
-    # -----------------------------------------------------
-
-    header("MENU")
-
-
-    for row in range(VISIBLE_ITEMS):
-
+    for row, y in enumerate(row_y):
         index = start + row
-
         if index >= len(items):
             break
 
-        y = 15 + (row * 9)
+        label = items[index]
+        label_w = len(label) * 6
+        x = max(5, (SCREEN_WIDTH - label_w) // 2)
 
-
-        # Selection arrow
         if index == selected:
-            text(">", 2, y)
-
-
-        # Item text
-        text(items[index], 12, y)
-
-
-    # -----------------------------------------------------
-    # Scroll indicators
-    # -----------------------------------------------------
-
-    if start > 0:
-        text("^", 122, 15)
-
-    if start + VISIBLE_ITEMS < len(items):
-        text("v", 122, 51)
-
+            # Solid selection bar, matching the reference design.
+            fill_rounded_rect(card_x, y - 2, card_w, card_h, 3, 1)
+            inverted_text(label, x, y - 1)
+        else:
+            text(label, x, y)
 
     show()
 
 
 def run_menu(items):
-    """
-    Run an interactive menu.
-
-    Returns:
-        Selected item index when OK is pressed.
-        None when BACK is pressed.
-    """
-
-    # Empty menu
-    if len(items) == 0:
+    if not items:
         return None
 
-
     selected = 0
-
     menu(items, selected)
 
-
     while True:
-
         button = get_button()
-
 
         if button is None:
             time.sleep(0.01)
             continue
 
-
-        # -------------------------------------------------
-        # UP
-        # -------------------------------------------------
-
         if button == "UP":
-
-            selected -= 1
-
-            if selected < 0:
-                selected = len(items) - 1
-
+            selected = (selected - 1) % len(items)
             menu(items, selected)
-
-
-        # -------------------------------------------------
-        # DOWN
-        # -------------------------------------------------
-
         elif button == "DOWN":
-
-            selected += 1
-
-            if selected >= len(items):
-                selected = 0
-
+            selected = (selected + 1) % len(items)
             menu(items, selected)
-
-
-        # -------------------------------------------------
-        # OK
-        # -------------------------------------------------
-
         elif button == "OK":
-
             return selected
-
-
-        # -------------------------------------------------
-        # BACK
-        # -------------------------------------------------
-
         elif button == "BACK":
-
             return None
