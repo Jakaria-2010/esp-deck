@@ -5,7 +5,7 @@ from nexor.display import clear, show, text, center_text
 from nexor.system import run_os
 
 OS_NAME = "NexorOS"
-OS_VERSION = "0.2.5"
+OS_VERSION = "0.3.0"
 
 
 def boot_screen():

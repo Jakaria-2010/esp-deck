@@ -17,8 +17,8 @@ git push
 Use semantic-style version tags:
 
 - `v0.2.5` — first public prototype milestone
-- `v0.2.6` — bug-fix release
-- `v0.3.0` — feature release
+- `v0.4.0` — improved ui , contain settings
+- `v0.5.0` — fixed bug , contain some apps
 - `v1.0.0` — first stable release
 
 A GitHub Release should contain:

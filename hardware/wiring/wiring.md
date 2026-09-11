@@ -1,4 +1,4 @@
-# ESP-Deck / NexorOS v0.2.5 Hardware Wiring
+# ESP-Deck / NexorOS v0.3.0 Hardware Wiring
 
 ## Display: SSD1306 OLED (SPI)
 

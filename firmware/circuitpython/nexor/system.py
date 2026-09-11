@@ -14,11 +14,10 @@ from .clock import get_time_string, get_date_string, get_datetime
 
 
 OS_NAME = "NexorOS"
-OS_VERSION = "0.2.5"
+OS_VERSION = "0.3.0"
 
 
 MAIN_MENU = [
-    "To-Do List",
     "Music Player",
     "Stopwatch",
     "File Manager",
@@ -117,21 +116,18 @@ def app_placeholder(name):
 def launch_app(index):
 
     if index == 0:
-        app_placeholder("To-Do List")
-
-    elif index == 1:
         app_placeholder("Music Player")
 
-    elif index == 2:
+    elif index == 1:
         app_placeholder("Stopwatch")
 
-    elif index == 3:
+    elif index == 2:
         app_placeholder("File Manager")
 
-    elif index == 4:
+    elif index == 3:
         app_placeholder("Advanced Tools")
 
-    elif index == 5:
+    elif index == 4:
         app_placeholder("Settings")
 
 
